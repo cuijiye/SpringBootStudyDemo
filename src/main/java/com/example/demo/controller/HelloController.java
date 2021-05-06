@@ -25,6 +25,7 @@ public class HelloController {
         model.addAttribute("msg6", "<h6>hello,SpringBoot</h6>");
         model.addAttribute("msg5", "<h5>hello,SpringBoot</h5>");
         model.addAttribute("GitHub push", "<h5>hello,SpringBoot</h5>");
+        model.addAttribute("GitHub pull", "<h5>hello,SpringBoot</h5>");
         model.addAttribute("users", Arrays.asList("zhangsan", "lisi", "wangwu"));
         return "hello";
     }
