@@ -2,8 +2,8 @@
 server:
   port: 8080
 #  首页地址配置
-  servlet:
-    context-path: '/cjy'
+#  servlet:
+#    context-path: '/cjy'
 Spring:
   mvc:
     format:
