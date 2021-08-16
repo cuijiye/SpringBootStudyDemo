@@ -1,14 +1,18 @@
 #SpringBoot多环境配置：可以选择激活哪一个环境配置
 server:
   port: 8080
+#  首页地址配置
+  servlet:
+    context-path: '/cjy'
 Spring:
   mvc:
     format:
       date: dd/MM/yyyy
+  thymeleaf:
+    cache: false
 #spring:
 #  profiles:
 #    active: test
-
 
 ---
 server:
