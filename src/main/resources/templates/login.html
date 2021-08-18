@@ -38,24 +38,33 @@
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-                <form method="get" class="text-left form-validate">
+                <!--    账号密码错误提示信息      -->
+                <p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+
+                <form method="get" class="text-left form-validate" th:action="@{/user/login}">
                     <div class="form-group-material">
                         <input id="login-username" type="text" name="loginUsername" required
                                data-msg="Please enter your username" class="input-material">
-                        <label for="login-username" class="label-material">Username</label>
+                        <label for="login-username" class="label-material" th:text="#{username}"></label>
                     </div>
                     <div class="form-group-material">
                         <input id="login-password" type="password" name="loginPassword" required
                                data-msg="Please enter your password" class="input-material">
-                        <label for="login-password" class="label-material">Password</label>
+                        <label for="login-password" class="label-material" th:text="#{password}"></label>
                     </div>
-                    <div class="form-group text-center"><a id="login" href="index.html"
-                                                           class="btn btn-primary">Login</a>
+                    <div class="form-group text-center"><button id="login" type="submit"
+                                                           class="btn btn-primary" th:text="#{login}"></button>
                         <!-- This should be submit button but I replaced it with <a> for demo purposes-->
                     </div>
                 </form>
-                <a href="#" class="forgot-pass">Forgot Password?</a><small>Do not have an account? </small><a
-                    href="register.html" class="signup">Signup</a>
+                <a href="#" class="forgot-pass" th:text="#{forgot}"></a><small th:text="#{login.tip}"> </small><a
+                    href="register.html" class="signup" th:text="#{signup}"></a>
+                <div>
+                    <a id="cn" href="index.html" th:href="@{/login.html(language='zh_CN')}"
+                       class="btn btn-primary" th:text="#{chinese}"></a>
+                    <a id="us" href="index.html" th:href="@{/login.html(language='en_US')}"
+                       class="btn btn-primary" th:text="#{english}"></a>
+                </div>
             </div>
             <div class="copyrights text-center">
 
