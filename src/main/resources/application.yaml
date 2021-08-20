@@ -7,7 +7,7 @@ server:
 Spring:
   mvc:
     format:
-      date: dd/MM/yyyy
+      date: yyyy-MM-dd
   thymeleaf:
     cache: false
   messages:
