@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
+import java.util.ArrayList;
 
 @Controller
 public class LoginController {
@@ -17,7 +18,7 @@ public class LoginController {
             session.setAttribute("loginUser", loginUsername);
             return "redirect:/main.html";
         }else {
-            model.addAttribute("msg", "用户名或密码错误1！");
+            model.addAttribute("msg", "用户名或密码错误！");
             return "login";
         }
     }

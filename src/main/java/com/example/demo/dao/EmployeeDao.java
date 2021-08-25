@@ -29,11 +29,11 @@ public class EmployeeDao {
     static {
         employees = new HashMap<Integer, Employee>();
 
-        employees.put(101, new Employee(1001,"张三","1234567891@qq.com",0,new Department(101, "教学部"),new Date()));
-        employees.put(102, new Employee(1002,"李四","1234567892@qq.com",1,new Department(102, "体育部"),new Date()));
-        employees.put(103, new Employee(1003,"王五","1234567893@qq.com",0,new Department(103, "图书部"),new Date()));
-        employees.put(104, new Employee(1004,"马六","1234567894@qq.com",1,new Department(104, "绘画部"),new Date()));
-        employees.put(105, new Employee(1005,"赵七","1234567895@qq.com",1,new Department(105, "团支部"),new Date()));
+        employees.put(1001, new Employee(1001,"张三","1234567891@qq.com",0,new Department(101, "教学部"),new Date()));
+        employees.put(1002, new Employee(1002,"李四","1234567892@qq.com",1,new Department(102, "体育部"),new Date()));
+        employees.put(1003, new Employee(1003,"王五","1234567893@qq.com",0,new Department(103, "图书部"),new Date()));
+        employees.put(1004, new Employee(1004,"马六","1234567894@qq.com",1,new Department(104, "绘画部"),new Date()));
+        employees.put(1005, new Employee(1005,"赵七","1234567895@qq.com",1,new Department(105, "团支部"),new Date()));
     }
 
     //主键自增
