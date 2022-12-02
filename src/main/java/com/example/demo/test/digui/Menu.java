@@ -1,5 +1,6 @@
 package com.example.demo.test.digui;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -9,7 +10,7 @@ import java.util.List;
  * @CreateTime: 2021/5/12 19:32
  * @Description:
  */
-public class Menu {
+public class Menu implements Serializable {
 
     private String id;
     private String parentId;
@@ -18,7 +19,10 @@ public class Menu {
     private String yxbz;
     private List<Menu> children;
 
-    public Menu(String id,String parentId,String text,String url,String yxbz) {
+    public Menu() {
+    }
+
+    public Menu(String id, String parentId, String text, String url, String yxbz) {
         this.id=id;
         this.parentId=parentId;
         this.text=text;

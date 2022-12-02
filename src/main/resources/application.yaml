@@ -30,7 +30,6 @@ spring:
   profiles: test
 
 
-
 #person:
 #  name: 张三${random.uuid}
 #  age: ${random.int}
